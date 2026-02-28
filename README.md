@@ -17,12 +17,9 @@ Conçue avec une approche Mobile-First pour permettre le scan rapide de codes-ba
 
 ## 🎨 Maquettes de l'application
 
-![Écran d'accueil](docs/assets/Accueil.svg)
-![Écran Collection](docs/assets/Collection - Grille.svg)
-
-## Installation locale (Développement)
-
-*(Les instructions pour lancer le projet en local avec npm ou Docker seront ajoutées ici au fur et à mesure de l'avancement du projet).*
+<img src="docs/assets/Accueil.svg" width="200" alt="Écran Acceuil">
+<img src="docs/assets/Collection-Liste.svg" width="200" alt="Écran Collection">
+<img src ="docs/assets/Profil.svg" width="200" alt="Ecran Profil">
 
 ---
 *Projet personnel développé parce que les applications sont freemium.*
