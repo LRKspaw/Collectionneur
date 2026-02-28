@@ -17,9 +17,17 @@ Conçue avec une approche Mobile-First pour permettre le scan rapide de codes-ba
 
 ## 🎨 Maquettes de l'application
 
-<img src="docs/assets/Accueil.svg" width="200" alt="Écran Acceuil">
-<img src="docs/assets/Collection-Liste.svg" width="200" alt="Écran Collection">
-<img src ="docs/assets/Profil.svg" width="200" alt="Ecran Profil">
+<div align ="center">
+    <img src="docs/assets/Accueil.svg" width="200" alt="Écran Acceuil">
+    <img src="docs/assets/Collection-Liste.svg" width="200" alt="Écran Collection">
+    <img src ="docs/assets/Profil.svg" width="200" alt="Ecran Profil">
+</div>
+<div align ="center">
+    <img src="docs/assets/AjoutManuel.svg" width="200" alt="Ajout Manuel">
+    <img src="docs/assets/FicheDétail.svg" width="200" alt="Fiche Détail">
+    <img src ="docs/assets/Scanner.svg" width="200" alt="Scanner">
+</div>
+
 
 ---
 *Projet personnel développé parce que les applications sont freemium.*
