@@ -7,13 +7,14 @@ Conçue avec une approche Mobile-First pour permettre le scan rapide de codes-ba
 
 - **Frontend :** React.js (PWA)
 - **Backend :** Node.js & Express
-- **Base de données :** MongoDB (NoSQL) ou PostgreSQL (SQL)
+- **Base de données :** MongoDB (NoSQL)
 - **Hébergement :** Proxmox (Conteneur LXC) / Docker
 
 ## 🔗 Documentation
 
 - [Cahier des charges et fonctionnalités (MVP & V2)](docs/features.md)
 - [Lien vers les maquettes Figma](https://www.figma.com/design/71dOwCcKUDi9yuPvo09Y9r/Sans-titre?node-id=8-12&t=Vc8VUhVkFoIAyWaZ-1)
+- [Architecture de l'app](docs/architecture.md)
 
 ## 🎨 Maquettes de l'application
 
@@ -28,6 +29,5 @@ Conçue avec une approche Mobile-First pour permettre le scan rapide de codes-ba
     <img src ="docs/assets/Scanner.svg" width="200" alt="Scanner">
 </div>
 
-
 ---
-*Projet personnel développé parce que les applications sont freemium.*
+*Projet personnel développé parce que les applications sont freemium. OUI j'utilise l'IA*
