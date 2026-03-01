@@ -3,6 +3,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 require("dotenv").config();
 const itemsRoutes = require("./routes/items");
+const searchRoutes = require("./routes/search");
 
 //Initialisation de l'app express
 const app = express();
@@ -14,6 +15,9 @@ app.use(express.json());
 
 //Dire a Express d'utiliser les routes itemsRoutes pour les addresses qui commencent par /api/items
 app.use("/api/items", itemsRoutes);
+
+//Dire a Express d'utiliser les routes searchRoutes pour les addresses qui commencent par /api/search
+app.use("/api/search", searchRoutes);
 
 //Connexion a MongoDB
 mongoose.connect(process.env.MONGO_URI)
