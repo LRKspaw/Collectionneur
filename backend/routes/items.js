@@ -2,7 +2,10 @@ const express = require("express");
 const router = express.Router();
 const Item = require("../models/Item")
 
+//CRUD (Create Read Update Delete)
 
+
+//PUT (create)
 router.post("/", async (req, res) => {
     try {
         const item = new Item(req.body);
@@ -52,6 +55,7 @@ router.get("/:id", async (req, res) => {
     }
 });
 
+//PUT (modif) a partir d'un id
 router.put("/:id", async (req, res) => {
     const id = req.params.id;
     try {
@@ -67,6 +71,8 @@ router.put("/:id", async (req, res) => {
     }
 });
 
+
+//DELETE a partir d'un id
 router.delete("/:id", async (req,res) => {
     const id = req.params.id;
     try {
