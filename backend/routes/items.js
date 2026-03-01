@@ -14,6 +14,7 @@ router.post("/", async (req, res) => {
     }
 });
 
+//GET sur toute la collection, avec option de filtrage
 router.get("/", async (req, res) => {
     try {
         let filter = {};
@@ -34,6 +35,7 @@ router.get("/", async (req, res) => {
     }
 });
 
+//GET a partir d'un id pour le tri
 router.get("/:id", async (req, res) => {
     const id = req.params.id;
     try {
@@ -51,6 +53,33 @@ router.get("/:id", async (req, res) => {
 });
 
 router.put("/:id", async (req, res) => {
-
+    const id = req.params.id;
+    try {
+        const updatedItem = await Item.findByIdAndUpdate(id, req.body, { new: true, runValidators: true });
+        if(!updatedItem) {
+            res.status(404).json({ message: "Item non trouvé" });
+        } else {
+            res.status(200).json(updatedItem);
+        }
+    } catch (error) {
+        console.log("Erreur lors de la mise à jour de l'item:", error);
+        res.status(500).json({ message: "Erreur lors de la mise à jour de l'item" });
+    }
 });
+
+router.delete("/:id", async (req,res) => {
+    const id = req.params.id;
+    try {
+        const deletedItem = await Item.findByIdAndDelete(id);
+        if(!deletedItem) {
+            res.status(404).json({ message: "Item non trouvé" });
+        } else {
+            res.status(200).json({ message: "Item supprimé avec succès" });
+        }
+    } catch (error) {
+        console.log("Erreur lors de la suppression de l'item:", error);
+        res.status(500).json({ message: "Erreur lors de la suppression de l'item" });
+    }
+});
+
 module.exports = router;
