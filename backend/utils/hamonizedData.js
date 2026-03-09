@@ -89,7 +89,7 @@ function mapTMDBFull(movie){
     return {
         type: 'movie',
         title: movie.title || movie.original_title,
-        cover_url: posterPath.startsWith('http') 
+        cover_url: posterPath.startsWith('http')
             ? posterPath 
             : `https://image.tmdb.org/t/p/w500${posterPath}`,
         barcode: "", 
