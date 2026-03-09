@@ -1,10 +1,9 @@
 const axios = require("axios");
-const { mapGoogleBook } = require("../utils/hamonizedData");
 
 async function searchBookByBarCode(barcode) {
     try {
         const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=isbn:${barcode}&key=${process.env.GOOGLE_KEY_BOOKS}`);
-        const harmonizedBook = mapGoogleBook(response.data);
+        const harmonizedBook = response.data;
         if (response.data.totalItems > 0) {
             return harmonizedBook; 
         } else {

@@ -19,8 +19,9 @@ router.post("/add-book", async (req, res) => {
     try {
         const { barcode } = req.body;
         const rawData = await searchBookByBarCode(barcode);
+        console.log("Structure de rawData :", Object.keys(rawData));
         const mappedData = mapGoogleBook(rawData);
-        if (!mappedData) return res.status(404).json({ message: "Livre introuvable" });
+        if (!mappedData) return res.status(404).json({ message: "Livre introuvable", barcode: barcode });
         const item = new Item(mappedData);
         await item.save();
         res.status(201).json(item);
@@ -51,8 +52,11 @@ router.post("/add-movie", async (req, res) => {
         }
 
         const fullMovieData = await getFilmById(id_tmdb);
-
-        const item = new Item(fullMovieData);
+        const mappedData = mapTMDBFull(fullMovieData);
+        if (!mappedData) {
+            return res.status(404).json({ message: "Film introuvable" });
+        }
+        const item = new Item(mappedData);
 
         await item.save();
         res.status(201).json(item);

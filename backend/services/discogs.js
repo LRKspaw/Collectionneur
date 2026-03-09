@@ -1,5 +1,4 @@
 const axios = require("axios");
-const { mapDiscogs } = require("../utils/hamonizedData");
 
 async function searchMusicByBarCode(barcode) {
     try{
@@ -15,7 +14,7 @@ async function searchMusicByBarCode(barcode) {
             }
         } );
         if (res.data.results && res.data.results.length > 0) {
-            return mapDiscogs(res.data);
+            return res.data;
         } else{
             return null;
         }
