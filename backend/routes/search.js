@@ -24,7 +24,7 @@ router.get("/music/:barcode", async (req, res) => {
     }
 });
 
-router.get("/films/:title", async (req, res) => {
+router.get("/movie/:title", async (req, res) => {
     const { title } = req.params;
     try {
         const films = await searchFilmByTitle(title);

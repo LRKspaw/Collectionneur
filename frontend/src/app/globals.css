@@ -10,3 +10,13 @@
   --color-accent: #FB91FF;
   --color-text: #D1A6CD;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
+.no-scrollbar {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}

@@ -15,6 +15,7 @@ Conçue avec une approche Mobile-First pour permettre le scan rapide de codes-ba
 - [Cahier des charges et fonctionnalités (MVP & V2)](docs/features.md)
 - [Lien vers les maquettes Figma](https://www.figma.com/design/71dOwCcKUDi9yuPvo09Y9r/Sans-titre?node-id=8-12&t=Vc8VUhVkFoIAyWaZ-1)
 - [Architecture de l'app](docs/architecture.md)
+- [Integration des APIs externes](docs/integration_api.md)
 
 ## 🎨 Maquettes de l'application
 
