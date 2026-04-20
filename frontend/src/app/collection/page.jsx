@@ -4,6 +4,7 @@ import { Input, Button } from "@heroui/react";
 import { Search, ScanLine, List, Grid, ChevronDown } from "lucide-react";
 import CollectionItem from "../../components/CollectionItem";
 
+
 export default function CollectionPage() {
     const [viewMode, setViewMode] = useState("grid"); 
     const [items, setItems] = useState([]);
